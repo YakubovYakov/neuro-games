@@ -1,0 +1,65 @@
+/* Специфика Горбова: цвета цифр, «найденные» ячейки и двойная цель в панели.
+   Общая обвязка — в styles/game.css */
+
+/* --- Цвета ячеек --- */
+
+.gorbova__cell--black {
+  font-weight: 600;
+  background: #1c1b1f;
+  color: #fff;
+  border-color: #1c1b1f;
+}
+
+.gorbova__cell--black:hover:not(:disabled) {
+  background: #333239;
+  border-color: #333239;
+}
+
+.gorbova__cell--red {
+  font-weight: 600;
+  background: #e03a2f;
+  color: #fff;
+  border-color: #e03a2f;
+}
+
+.gorbova__cell--red:hover:not(:disabled) {
+  background: #c4332a;
+  border-color: #c4332a;
+}
+
+.gorbova__cell--done {
+  opacity: 0.25;
+  cursor: default;
+}
+
+/* --- Панель: две цели + стрелка очереди --- */
+
+.gorbova__target {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  transition: opacity 0.2s;
+}
+
+.gorbova__target--active { opacity: 1; }
+.gorbova__target--dim    { opacity: 0.3; }
+
+.gorbova__target-number {
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.gorbova__target-number--black { color: var(--color-text-strong); }
+.gorbova__target-number--red   { color: #d63b3b; }
+
+.gorbova__target-hint {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}
+
+.gorbova__turn-arrow {
+  font-size: 22px;
+  color: var(--color-text-secondary);
+}

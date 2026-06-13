@@ -1,0 +1,23 @@
+/* Специфика Шульте: цвета цифр (цветной режим) и содержимое панели.
+   Общая обвязка — в styles/game.css */
+
+/* --- Цветная версия --- */
+
+.schulte__cell--red    { color: #e2574c; }
+.schulte__cell--yellow { color: #f2c12e; }
+.schulte__cell--green  { color: #4e8c3a; }
+.schulte__cell--blue   { color: #2046c8; }
+
+/* --- Панель --- */
+
+.schulte__next {
+  font-size: 64px;
+  font-weight: 600;
+  color: var(--color-text-strong);
+  line-height: 1;
+}
+
+.schulte__hint {
+  font-size: 16px;
+  color: var(--color-text-secondary);
+}
